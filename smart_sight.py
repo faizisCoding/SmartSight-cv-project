@@ -87,7 +87,7 @@ def detect_vehicles(frame, bgsubtractor, min_area=500):
     return vehicles
 
 
-def save_violation_frame(frame, frame_number, save_dir=r"C:\Users\Faiz\Desktop\programs\CV\DataSets\Violations"):
+def save_violation_frame(frame, frame_number, save_dir=r"{save_location}"):
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     filename = f"violation_{frame_number}.jpg"
@@ -246,6 +246,6 @@ def main(video_path, output_path="output.mp4", speed_limit_kmh=80, px_to_meter=0
 
 if __name__ == "__main__":
     main(
-        "C:\\Users\\Faiz\\Desktop\\programs\\CV\\DataSets\\Red_lights\\Red_Light_Violation_04.mp4",
-        output_path="C:\\Users\\Faiz\\Desktop\\programs\\CV\\DataSets\\Violations\\output.mp4"
+        "{input path}",
+        output_path="{output path}"
     )
